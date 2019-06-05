@@ -11,11 +11,24 @@ This is meant to prevent those embarrassing moments when you're arriving at your
 It will also prevent the classic "walk too far away with your bluetooth headset" scenario, where again your mac will take over the sound and allow your co-workers to bask in your embarrassment.
 
 ## Download / Install
-Best to just get it from the Mac App Store:
+
+Best to just get it from the Mac App Store and support the original author:
 
 [> **AutoMute on Mac App Store** <](https://itunes.apple.com/us/app/automute-preventing-awkward-situations/id1118136179)
 
-Otherwise, simply open the workspace file in Xcode and build "AutoMute", everything *should* work.
+The alternate option is to download and install the [latest release](https://github.com/nnathan/automute/releases/latest).
+
+## Build Instructions
+
+## Using CLI
+
+To build from command line (without any signing crap):
+
+    xcodebuild archive -workspace automute.xcworkspace -scheme AutoMute -archivePath ./build CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO
+
+### Using Xcode
+
+Simply open the workspace file in Xcode and build "AutoMute", everything *should* work. You will need to configure a codesign certificate. This can be fiddly.
 
 ## Screenshots
 ![Screenshot1](https://user-images.githubusercontent.com/31284/49688097-ac653900-fb15-11e8-9c48-3db96df5dcbf.png)
